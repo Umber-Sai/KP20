@@ -1,0 +1,30 @@
+<header class="header">
+    <div class="container header__container">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="logo">
+        </div>
+
+        <div class="burger" (click)="openMenu(menuElement)">
+            <div class="burger__pass"></div>
+            <div class="burger__pass"></div>
+            <div class="burger__pass"></div>
+        </div>
+
+        <nav class="menu" #menuElement (click)="closeMenu(menuElement)">
+            <div class="close">✕</div>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#choose" class="menu__link" >Пироженки</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">О нас</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#order" class="menu__link">Оформить заказ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="number header__number">+375 (29) 368-98-68</div>
+    </div>
+</header>

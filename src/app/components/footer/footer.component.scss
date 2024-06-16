@@ -1,0 +1,72 @@
+.footer {
+    background-color: #c0707c;
+    padding: 73px 0 63px;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-areas: 
+        "logo inst tel"
+        "rights inst tel";
+    justify-content: space-between;
+}
+
+.footer__logo {
+    grid-area: logo;
+    align-self: end;
+}
+
+.footer__rights {
+    grid-area: rights;
+    font-size: 12px;
+    font-family: "Gilroy-Regular";
+    color: rgb(227, 172, 180);
+    align-self: start;
+    margin-top: 19px;
+}
+
+.inst {
+    grid-area: inst;
+    text-align: center;
+}
+
+.inst__text {
+    font-size: 16px;
+    font-family: "Gilroy-Bold";
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+}
+  
+.footer__number {
+    grid-area: tel;
+    align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        padding: 50px 0;
+        }
+    
+        .footer__container {
+            justify-content: center;
+            grid-template-areas: 
+                "logo"
+                "tel"
+                "inst"
+                "rights";
+        }
+    
+        .footer__logo {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+    
+        .footer__number {
+            justify-self: center;
+            margin-bottom: 40px;
+        }
+    
+        .footer__rights {
+            margin-top: 40px;
+        }
+}
