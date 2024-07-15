@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Advantage } from './type/advantages.type';
 import { Product } from './type/product.type';
 import { ProductsService } from './services/products.service';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -43,8 +44,10 @@ export class AppComponent {
   }
 
   public products: Product[];
-  
-  constructor(private productService : ProductsService) {
+
+  constructor(private productService : ProductsService,
+    public cartService : CartService
+  ) {
     this.products = productService.getProducts()
   }
 
@@ -52,9 +55,13 @@ export class AppComponent {
     target.scrollIntoView({behavior : 'smooth'});
   }
 
-  chooseProduct(target: HTMLElement, title: string): void {
+  chooseProduct(target: HTMLElement, title: string, cost: number): void {
     this.formValues.product = title.toUpperCase();
     target.scrollIntoView({behavior : 'smooth'});
+
+    this.cartService.count++;
+    this.cartService.totalPrice += cost;
+    this.cartService.products.push(title)
   }
 
   validation() {
@@ -69,18 +76,5 @@ export class AppComponent {
       alert('Заполните поля');
     }
   }
-
-
-
-  // document.querySelectorAll('#menu *').forEach((item) => {
-  //   item.onclick = () => {
-  //     document.getElementById('menu').classList.remove('open')
-  //   }
-  // })
-
-  // document.getElementById('close').onclick = function () {
-  //   document.getElementById('menu').classList.remove('open');
-  // }
-
   
 }

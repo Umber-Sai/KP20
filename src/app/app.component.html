@@ -67,7 +67,7 @@
             <div class="choice__price">{{product.cost}} руб.</div>
           </div>
           <div class="choice__active">
-            <button class="button choice__button" (click)="chooseProduct(orderElement, product.title)">Заказать</button>
+            <button class="button choice__button" (click)="chooseProduct(orderElement, product.title, product.cost)">Заказать</button>
           </div>
         </div>
       </div>
@@ -111,9 +111,10 @@
 <div class="present" (click)="moveTo(orderElement)" *ngIf="showPresent">
   <div class="present__holder">
     <div class="present__message">
-      Оформите заказ и получите подарок!
+      {{cartService.totalPrice}} руб.
     </div>
   </div>
+  <div class="products__count" *ngIf="cartService.count > 0">{{cartService.count}}</div>
 
-  <img src="../assets/images/present.png" alt="present">
+  <img src="../assets/images/cart.png" alt="cart">
 </div>
