@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { Advantage } from './type/advantages.type';
 import { Product } from './type/product.type';
+import { ProductsService } from './services/products.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ProductsService]
 })
 export class AppComponent {
   title = 'KP20';
@@ -34,33 +36,16 @@ export class AppComponent {
     },
   ]
 
-  public products: Product[] = [
-    {
-      title: 'Макарун с малиной',
-      cost: '1,70',
-      img: '1.png'
-    },
-    {
-      title: 'Макарун с манго',
-      cost: '1,70',
-      img: '2.png'
-    },
-    {
-      title: 'Пирог с ванилью',
-      cost: '1,70',
-      img: '3.png'
-    },
-    {
-      title: 'Пирог с фисташками',
-      cost: '1,70',
-      img: '4.png'
-    },
-  ]
-
-  formValues = {
+  public formValues = {
     product: '',
     name: '',
     number: ''
+  }
+
+  public products: Product[];
+  
+  constructor(private productService : ProductsService) {
+    this.products = productService.getProducts()
   }
 
   moveTo(target: HTMLElement): void {
