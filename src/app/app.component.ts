@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Advantage } from './type/advantages.type';
-import { Product } from './type/product.type';
+import { ProductType } from './type/product.type';
 import { ProductsService } from './services/products.service';
 import { CartService } from './services/cart.service';
 
@@ -21,7 +20,7 @@ export class AppComponent {
     number: ''
   }
 
-  public products: Product[];
+  public products: ProductType[];
 
   constructor(private productService : ProductsService,
     public cartService : CartService
@@ -33,13 +32,8 @@ export class AppComponent {
     target.scrollIntoView({behavior : 'smooth'});
   }
 
-  chooseProduct(target: HTMLElement, title: string, cost: number): void {
-    this.formValues.product = title.toUpperCase();
-    target.scrollIntoView({behavior : 'smooth'});
-
-    this.cartService.count++;
-    this.cartService.totalPrice += cost;
-    this.cartService.products.push(title)
+  confirmProduct(title: string) {
+    alert(title + ' добавлен в корзину!')
   }
 
   validation() {

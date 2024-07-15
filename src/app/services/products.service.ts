@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../type/product.type';
+import { ProductType } from '../type/product.type';
 
 @Injectable()
 export class ProductsService {
 
   constructor() { }
 
-  getProducts ():Product[] {
+  getProducts ():ProductType[] {
     return [
       {
         title: 'Макарун с малиной',

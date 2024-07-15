@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Advantage } from 'src/app/type/advantages.type';
+import { AdvantageType } from 'src/app/type/advantages.type';
 
 @Component({
   selector: 'component-advantages',
@@ -7,7 +7,7 @@ import { Advantage } from 'src/app/type/advantages.type';
   styleUrls: ['./advantages.component.scss']
 })
 export class AdvantagesComponent implements OnInit {
-  public advantages: Advantage[] = [
+  public advantages: AdvantageType[] = [
     {
       id: 1,
       title: 'Лучшие продукты',

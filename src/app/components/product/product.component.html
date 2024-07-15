@@ -1,0 +1,16 @@
+<div class="choice">
+    <div class="choice__img">
+        <img src="../assets/images/{{product.img}}" alt="{{product.title}}">
+    </div>
+
+    <div class="choice__info">
+        <div class="choice__title">{{product.title}}</div>
+        <div class="choice__cost">
+            <div class="choice__quantity">1 шт.</div>
+            <div class="choice__price">{{product.cost}} руб.</div>
+        </div>
+        <div class="choice__active">
+            <button class="button choice__button" (click)="chooseProduct(product.title, product.cost)">Заказать</button>
+        </div>
+    </div>
+</div>
