@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { AdvantagesComponent } from './components/advantages/advantages.component';
 import { ProductComponent } from './components/product/product.component';
+import { ButtonDirective } from './directives/button.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductComponent } from './components/product/product.component';
     HeaderComponent,
     FooterComponent,
     AdvantagesComponent,
-    ProductComponent
+    ProductComponent,
+    ButtonDirective
   ],
   imports: [
     BrowserModule,
