@@ -21,35 +21,7 @@
   </div>
 </section>
 
-<section class="advantages">
-  <div class="container">
-    <div class="advantages__up">
-      <div class="advantages__info">
-        <div class="advantages__title">
-          Мы печём для вас
-          вкуснейшие макаруны
-          уже более 10 лет
-        </div>
-        <div class="advantages__text">
-          Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
-          ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей,
-          маргарина, разрыхлителей и улучшителей муки.
-        </div>
-      </div>
-      <div class="advantages__img">
-        <img src="../assets/images/macaroon.png" alt="macaroon">
-      </div>
-    </div>
-
-    <div class="advantages__list">
-      <div class="advantage" *ngFor="let advantage of advantages">
-        <div class="advantage__circle">{{advantage.id}}</div>
-        <div class="advantage__title">{{advantage.title}}</div>
-        <div class="advantage__text">{{advantage.text}}</div>
-      </div>
-    </div>
-  </div>
-</section>
+<component-advantages></component-advantages>
 
 <section class="choose" #choose>
   <div class="container">
