@@ -10,6 +10,7 @@ import { AdvantagesComponent } from './components/advantages/advantages.componen
 import { ProductComponent } from './components/product/product.component';
 import { ButtonDirective } from './directives/button.directive';
 import { CurrencyPipePipe } from './pipes/currency-pipe.pipe';
+import { ShortTextPipe } from './pipes/short-text.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CurrencyPipePipe } from './pipes/currency-pipe.pipe';
     AdvantagesComponent,
     ProductComponent,
     ButtonDirective,
-    CurrencyPipePipe
+    CurrencyPipePipe,
+    ShortTextPipe
   ],
   imports: [
     BrowserModule,

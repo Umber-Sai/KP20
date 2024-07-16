@@ -22,7 +22,7 @@
         <div class="advantage" *ngFor="let advantage of advantages">
           <div class="advantage__circle">{{advantage.id}}</div>
           <div class="advantage__title">{{advantage.title}}</div>
-          <div class="advantage__text">{{advantage.text}}</div>
+          <div class="advantage__text">{{advantage.text | shortText}}</div>
         </div>
       </div>
     </div>
