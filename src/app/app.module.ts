@@ -11,6 +11,7 @@ import { ProductComponent } from './components/product/product.component';
 import { ButtonDirective } from './directives/button.directive';
 import { CurrencyPipePipe } from './pipes/currency-pipe.pipe';
 import { ShortTextPipe } from './pipes/short-text.pipe';
+import { PhoneNumberPipe } from './pipes/phone-number.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShortTextPipe } from './pipes/short-text.pipe';
     ProductComponent,
     ButtonDirective,
     CurrencyPipePipe,
-    ShortTextPipe
+    ShortTextPipe,
+    PhoneNumberPipe
   ],
   imports: [
     BrowserModule,

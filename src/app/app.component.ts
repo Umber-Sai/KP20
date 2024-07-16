@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductType } from './type/product.type';
 import { ProductsService } from './services/products.service';
 import { CartService } from './services/cart.service';
@@ -11,7 +11,7 @@ import { CartService } from './services/cart.service';
 })
 export class AppComponent {
   title = 'KP20';
-  public phoneNumber: string = '+375 (29) 368-98-68';
+  @Input() tel : string = ''
   public showPresent: boolean = true;
   
   public formValues = {
@@ -32,8 +32,10 @@ export class AppComponent {
     target.scrollIntoView({behavior : 'smooth'});
   }
 
-  confirmProduct(title: string) {
-    alert(title + ' добавлен в корзину!')
+  confirmProduct(title: string, target : HTMLElement, input : HTMLInputElement) {
+    alert(title + ' добавлен в корзину!');
+    input.value = title
+    target.scrollIntoView({behavior : 'smooth'});
   }
 
   validation() {

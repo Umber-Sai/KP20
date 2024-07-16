@@ -27,7 +27,7 @@
   <div class="container">
     <div class="choose__title">Выберите свой макарун</div>
     <div class="choose__list">
-      <product *ngFor="let product of products" [product]="product" (addToCartEvent)="confirmProduct($event)"></product>
+      <product *ngFor="let product of products" [product]="product" (addToCartEvent)="confirmProduct($event, orderElement, productInput)"></product>
     </div>
   </div>
 </section>
@@ -52,7 +52,7 @@
       </div>
       <form action="https://webhook.site/e4bf9dd6-7d27-4af9-b9cf-1d3ae16de474" method="post">
         <div class="order__label">Ваш выбор</div>
-        <input class="order__input" type="text" name="product" placeholder="Напишите, что хотите заказать..." required required [(ngModel)]="formValues.product">
+        <input class="order__input" #productInput type="text" name="product" placeholder="Напишите, что хотите заказать..." required required [(ngModel)]="formValues.product">
 
         <div class="order__label">Заполните данные для заказа</div>
         <input class="order__input" type="text" name="name" placeholder="Ваше имя" required [(ngModel)]="formValues.name">
