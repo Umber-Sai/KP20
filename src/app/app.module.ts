@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { AdvantagesComponent } from './components/advantages/advantages.component';
 import { ProductComponent } from './components/product/product.component';
 import { ButtonDirective } from './directives/button.directive';
+import { CurrencyPipePipe } from './pipes/currency-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ButtonDirective } from './directives/button.directive';
     FooterComponent,
     AdvantagesComponent,
     ProductComponent,
-    ButtonDirective
+    ButtonDirective,
+    CurrencyPipePipe
   ],
   imports: [
     BrowserModule,

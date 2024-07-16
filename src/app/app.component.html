@@ -68,7 +68,7 @@
 <div class="present" (click)="moveTo(orderElement)" *ngIf="showPresent">
   <div class="present__holder">
     <div class="present__message">
-      {{cartService.totalPrice}} руб.
+      {{cartService.totalPrice | currencyPipe}}
     </div>
   </div>
   <div class="products__count" *ngIf="cartService.count > 0">{{cartService.count}}</div>
