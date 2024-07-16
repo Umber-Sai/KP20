@@ -12,6 +12,7 @@ import { ButtonDirective } from './directives/button.directive';
 import { CurrencyPipePipe } from './pipes/currency-pipe.pipe';
 import { ShortTextPipe } from './pipes/short-text.pipe';
 import { PhoneNumberPipe } from './pipes/phone-number.pipe';
+import { ScrollService } from './services/scroll.service';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,14 @@ import { PhoneNumberPipe } from './pipes/phone-number.pipe';
     ButtonDirective,
     CurrencyPipePipe,
     ShortTextPipe,
-    PhoneNumberPipe
+    PhoneNumberPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ScrollService],
   bootstrap: [AppComponent, HeaderComponent, FooterComponent, AdvantagesComponent]
 })
 export class AppModule { }

@@ -4,17 +4,17 @@
             <img src="../assets/images/logo.png" alt="logo">
         </div>
 
-        <div class="burger" (click)="openMenu(menuElement)">
+        <div class="burger" (click)="activeMenu()">
             <div class="burger__pass"></div>
             <div class="burger__pass"></div>
             <div class="burger__pass"></div>
         </div>
 
-        <nav class="menu" #menuElement (click)="closeMenu(menuElement)">
+        <nav class="menu" #menuElement (click)="activeMenu()" [class.open]="isActiveMenu">
             <div class="close">✕</div>
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#choose" class="menu__link" >Пироженки</a>
+                    <a href="#choose" class="menu__link" (click)="scrollService.scrollTo(choose)">Пироженки</a>
                 </li>
                 <li class="menu__item">
                     <a href="#" class="menu__link">О нас</a>
